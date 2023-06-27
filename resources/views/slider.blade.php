@@ -41,9 +41,10 @@
 
         .swiper-slide img {
             display: block;
-            width: 100%;
-            height: 100%;
+            width: 90%;
+            height: 90%;
             object-fit: cover;
+            border-radius: 20%;
         }
     </style>
 </head>
