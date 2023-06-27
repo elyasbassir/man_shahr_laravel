@@ -38,11 +38,18 @@
             justify-content: center;
             align-items: center;
         }
-
-        .swiper-slide img {
+        .swiper-slide a{
             display: block;
             width: 90%;
             height: 90%;
+            object-fit: cover;
+            border-radius: 20%;
+
+        }
+        .swiper-slide img{
+            display: block;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 20%;
         }
@@ -54,8 +61,12 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
    @forelse($data as $value)
+
         <div class="swiper-slide">
+            <a href="{{url()->current()."#".$value->id}}">
             <img src="{{url('/image_slider/'.$city_hash.'/'.$value->slider_image_name)}}" alt="">
+            </a>
+
         </div>
         @empty
 
